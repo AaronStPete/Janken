@@ -1,44 +1,67 @@
-// const main = () => {
-//   document.querySelector('h1').textContent += '?'
-// }
 
-// document.addEventListener('DOMContentLoaded', main)
-
+let choicePlayer1 = null;
+let choicePlayer2 = null;
+console.log(choicePlayer1)
+console.log(choicePlayer2)
 
 // Player 1 makes a choice
-let choicePlayer1 = "none";
-  // button is clicked and choicePlayer1 is stored
+// button is clicked and choicePlayer1 is stored
 let p1Rock = () => {
-  let choicePlayer1 = "rock"
+  choicePlayer1 = "rock"
   console.log (choicePlayer1);
+  player1decided()
 }
 let p1Paper = () => {
-  let choicePlayer1 = "paper"
+  choicePlayer1 = "paper"
   console.log (choicePlayer1);
+  player1decided()
 }
 let p1Scissors = () => {
-  let choicePlayer1 = "scissors"
+  choicePlayer1 = "scissors"
   console.log (choicePlayer1);
+  player1decided()
 }
-console.log (choicePlayer1);
-  // player1Window is hidden
+
+// decisionBoxPlayer1 is filled with text
+let choiceBoxP1 = document.getElementById('decisionBoxPlayer1')
+const player1decided = () => {
+  console.log("Player 1 has decided")
+  console.log(choiceBoxP1)
+  if (choicePlayer1) {
+    console.log("choicePlayer1 is truthy")
+    choiceBoxP1.textContent = ("Player 1 has decided...")    
+  }
+}
 // Player 2 makes a choice
-let choicePlayer2 = "none";
-  // button is clicked and choicePlayer2 is stored
+
+// button is clicked and choicePlayer2 is stored
 let p2Rock = () => {
-  let choicePlayer2 = "rock"
+  choicePlayer2 = "rock"
   console.log (choicePlayer2);
+  player2decided()
 }
 let p2Paper = () => {
-  let choicePlayer2 = "paper"
+  choicePlayer2 = "paper"
   console.log (choicePlayer2);
+  player2decided()
 }
 let p2Scissors = () => {
-  let choicePlayer2 = "scissors"
+  choicePlayer2 = "scissors"
   console.log (choicePlayer2);
+  player2decided()
 }
-console.log (choicePlayer2);
-  // player2Window is hidden
+
+// decisionBoxPlayer2 is filled with text
+let choiceBoxP2 = document.getElementById('decisionBoxPlayer2')
+const player2decided = () => {
+  console.log("Player 2 has decided")
+  console.log(choiceBoxP2)
+  if (choicePlayer2) {
+    console.log("choicePlayer2 is truthy")
+    choiceBoxP2.textContent = ("Player 2 has decided...")    
+  }
+}
+
 // the rules are defined
   // paper beats rock
   // rock beats scissors
