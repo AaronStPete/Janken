@@ -3,6 +3,8 @@ let choicePlayer1 = null;
 let choicePlayer2 = null;
 console.log(choicePlayer1)
 console.log(choicePlayer2)
+let choiceBoxP1 = document.getElementById('decisionBoxPlayer1')
+let jsGameWindow = document.getElementById('gameWindow')
 
 // Player 1 makes a choice
 // button is clicked and choicePlayer1 is stored
@@ -23,7 +25,6 @@ let p1Scissors = () => {
 }
 
 // decisionBoxPlayer1 is filled with text
-let choiceBoxP1 = document.getElementById('decisionBoxPlayer1')
 const player1decided = () => {
   console.log("Player 1 has decided")
   console.log(choiceBoxP1)
@@ -70,50 +71,49 @@ const runGame = () => {
   if (choicePlayer1 === "rock") {
     if (choicePlayer2 === "scissors") {
         console.log("p1 wins")
-        gameWinner = "p1"
+        gameWinner = "Player 1 is the Winner!"
       } else if 
       (choicePlayer2 === "paper") {
         console.log("P2 wins")
-        gameWinner = "p2"
+        gameWinner = "Player 2 is the Winner!"
       } else if 
       (choicePlayer2 === "rock") {
         console.log("tie")
-        gameWinner = "tie"
+        gameWinner = "It's a Tie!"
       }
     }
   if (choicePlayer1 === "paper") {
     if (choicePlayer2 === "scissors") {
         console.log("p2 wins")
-        gameWinner = "p2"
+        gameWinner = "Player 2 is the Winner!"
       } else if 
       (choicePlayer2 === "paper") {
         console.log("tie")
-        gameWinner = "tie"
+        gameWinner = "It's a Tie!"
       } else if 
       (choicePlayer2 === "rock") {
-        console.log("p1 wins")
-        gameWinner = "p1"
+        console.log("Player 1 is the Winner!")
+        gameWinner = "Player 1 is the Winner!"
       }
     }
   if (choicePlayer1 === "scissors") {
     if (choicePlayer2 === "scissors") {
         console.log("tie")
-        gameWinner = "tie"
+        gameWinner = "It's a Tie!"
       } else if 
       (choicePlayer2 === "paper") {
         console.log("P1 wins")
-        gameWinner = "p1"
+        gameWinner = "Player 1 is the Winner!"
       } else if 
       (choicePlayer2 === "rock") {
         console.log("P2 wins")
-        gameWinner = "p2"
+        gameWinner = "Player 2 is the Winner!"
       }
     }
-
+// an outcome is displayed
+// show whoWon
+jsGameWindow.textContent = (gameWinner)
 }  
-  // an outcome is displayed
-  // show whoWon
-  // log winner with choicePlayer1 & choicePlayer2
   // offer reset button
 
 // reset button

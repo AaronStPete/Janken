@@ -8,33 +8,35 @@
   </head>
   <body>
     <h1>Let's play Janken!</h1>
-    <section class="whoWon hide">
-      <h1>The winner is </h1><h1 class="theWinner">###</h1>
+    <!-- <section class="whoWon hide">
+      <h1>The winner is </h1><h1 class="theWinner">###</h1> -->
     </section>
-    <section class="player player1Window">
+    <section id="gameWindow" >
+      <section class="player player1Window">
+        <section>
+          <h2>Player 1</h2>
+        </section>
+        <section id="decisionBoxPlayer1" class="decisionBox">
+          <button onclick="p1Rock()">Rock</button>
+          <button onclick="p1Paper()">Paper</button>
+          <button onclick="p1Scissors()">Scissors</button>
+        </section>
+      </section>
+      <section class="player player2Window">
+        <section>
+          <h2>Player 2</h2>
+        </section>
+        <section id="decisionBoxPlayer2" class="decisionBox">
+          <button onclick="p2Rock()">Rock</button>
+          <button onclick="p2Paper()">Paper</button>
+          <button onclick="p2Scissors()">Scissors</button>
+        </section>
+      </section>
       <section>
-        <h2>Player 1</h2>
+        <h2>Ready to play?</h2>
+        <button onclick="runGame()">Let's do this!</button>
       </section>
-      <section id="decisionBoxPlayer1" class="decisionBox">
-        <button onclick="p1Rock()">Rock</button>
-        <button onclick="p1Paper()">Paper</button>
-        <button onclick="p1Scissors()">Scissors</button>
-      </section>
-    </section>
-    <section class="player player2Window">
-      <section>
-        <h2>Player 2</h2>
-      </section>
-      <section id="decisionBoxPlayer2" class="decisionBox">
-        <button onclick="p2Rock()">Rock</button>
-        <button onclick="p2Paper()">Paper</button>
-        <button onclick="p2Scissors()">Scissors</button>
-      </section>
-    </section>
-    <section>
-      <h2>Ready to play?</h2>
-      <button onclick="runGame()">Let's do this!</button>
-    </section>
+    </section> 
     <script src="./main.js" charset="utf-8"></script>
   </body>
 </html>
