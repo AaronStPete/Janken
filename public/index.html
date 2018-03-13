@@ -4,30 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Janken</title>
-    <link rel="stylesheet" href="/screen.css">
+    <link rel="stylesheet" href="./screen.css">
   </head>
   <body>
     <h1>Let's play Janken!</h1>
-    <section class="player">
+    <section class="whoWon hide">
+      <h1>The winner is </h1><h1 class="theWinner">###</h1>
+    </section>
+    <section class="player player1Window">
       <section>
         <h2>Player 1</h2>
       </section>
       <section>
-        <button>Rock</button>
-        <button>Paper</button>
-        <button>Scissors</button>
+        <button onclick="p1Rock()">Rock</button>
+        <button onclick="p1Paper()">Paper</button>
+        <button onclick="p1Scissors()">Scissors</button>
       </section>
     </section>
-    <section class="player">
+    <section class="player player2Window">
       <section>
         <h2>Player 2</h2>
       </section>
       <section>
-        <button>Rock</button>
-        <button>Paper</button>
-        <button>Scissors</button>
+        <button onclick="p2Rock()">Rock</button>
+        <button onclick="p2Paper()">Paper</button>
+        <button onclick="p2Scissors()">Scissors</button>
       </section>
     </section>
-    <script src="/main.js" charset="utf-8"></script>
+    <script src="./main.js" charset="utf-8"></script>
   </body>
 </html>
