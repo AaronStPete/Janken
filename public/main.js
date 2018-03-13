@@ -61,17 +61,60 @@ const player2decided = () => {
     choiceBoxP2.textContent = ("Player 2 has decided...")    
   }
 }
+// display button to run game logic
+let gameWinner = null
+console.log(gameWinner)
+const runGame = () => {
 
-// the rules are defined
-  // paper beats rock
-  // rock beats scissors
-  // scissors beats paper
-  // there is a tie
-// the choices are compared
-  // winner is decided
-// an outcome is displayed
+  // the rules are defined
+  if (choicePlayer1 === "rock") {
+    if (choicePlayer2 === "scissors") {
+        console.log("p1 wins")
+        gameWinner = "p1"
+      } else if 
+      (choicePlayer2 === "paper") {
+        console.log("P2 wins")
+        gameWinner = "p2"
+      } else if 
+      (choicePlayer2 === "rock") {
+        console.log("tie")
+        gameWinner = "tie"
+      }
+    }
+  if (choicePlayer1 === "paper") {
+    if (choicePlayer2 === "scissors") {
+        console.log("p2 wins")
+        gameWinner = "p2"
+      } else if 
+      (choicePlayer2 === "paper") {
+        console.log("tie")
+        gameWinner = "tie"
+      } else if 
+      (choicePlayer2 === "rock") {
+        console.log("p1 wins")
+        gameWinner = "p1"
+      }
+    }
+  if (choicePlayer1 === "scissors") {
+    if (choicePlayer2 === "scissors") {
+        console.log("tie")
+        gameWinner = "tie"
+      } else if 
+      (choicePlayer2 === "paper") {
+        console.log("P1 wins")
+        gameWinner = "p1"
+      } else if 
+      (choicePlayer2 === "rock") {
+        console.log("P2 wins")
+        gameWinner = "p2"
+      }
+    }
+
+}  
+  // an outcome is displayed
   // show whoWon
   // log winner with choicePlayer1 & choicePlayer2
   // offer reset button
+
 // reset button
   // 
